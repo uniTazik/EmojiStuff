@@ -1,0 +1,13 @@
+<section class="main">
+  <div id="message-area" contenteditable="true"></div>
+  <a class="send-message" href="#" (click)="sendMessage()">Send</a>
+  <a class="toggle-emoji" href="#" (click)="togglePicker()"><i class="far fa-smile-wink"></i></a> 
+</section>
+
+<emoji-mart class="picker" *ngIf="isPickerToggled" (emojiClick)="addEmoji($event)"></emoji-mart>
+
+<section class="footer">
+  <div class="output">
+    <p>{{ content }}</p>
+  </div>
+</section>
